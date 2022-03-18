@@ -44,7 +44,7 @@ function SearchMovies(){
             
             <div className="card-list">
             
-                <h1>{text}</h1>
+                <h1></h1>
                 
             </div> 
             
