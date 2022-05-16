@@ -43,11 +43,8 @@ function SearchMovies(){
             </form>
             
             <div className="card-list">
-            
-                <h1>{test}</h1>
-                
+                <h1>{text}</h1>
             </div> 
-            
         </>
     )
 }
