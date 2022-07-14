@@ -20,10 +20,10 @@ function SearchMovies(){
             const data  = await res.json();
             setMovies(data.results);
             setLoading(false);
-        }catch(err){
-            console.error(err);
-        }
-    }
+    //     }catch(err){
+    //         console.error(err);
+    //     }
+    // }
     const MovieCardResults = movies.filter(movie => movie.poster_path).map(movie => (
         <MovieCard movie={movie} key={movie.id} /> ))
     const text = loading ===true ? "Loading...." : MovieCardResults
