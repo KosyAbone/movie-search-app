@@ -15,15 +15,15 @@ function SearchMovies(){
         setLoading(true);        
         const url = `https://api.themoviedb.org/3/search/movie?api_key=5dcf7f28a88be0edc01bbbde06f024ab&language=en-US&query=${query}&page=1&include_adult=false`;
         
-        // try {
-        //     const res = await fetch(url);
-        //     const data  = await res.json();
-        //     setMovies(data.results);
-        //     setLoading(false);
-    //     }catch(err){
-    //         console.error(err);
-    //     }
-    // }
+        try {
+            const res = await fetch(url);
+            const data  = await res.json();
+            setMovies(data.results);
+            setLoading(false);
+        }catch(err){
+            console.error(err);
+        }
+    }
     const MovieCardResults = movies.filter(movie => movie.poster_path).map(movie => (
         <MovieCard movie={movie} key={movie.id} /> ))
     const text = loading ===true ? "Loading...." : MovieCardResults
